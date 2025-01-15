@@ -1,10 +1,10 @@
-package com.kongqw.wifilibrary;
+package com.kongqw.wifilibrary
 
 /**
- * Created by kongqingwei on 2017/3/8.
- * OPEN, WEP, WPA, WPA2
+ *
+ * @author kongqingwei
+ * @date 2017/3/8
  */
-
-public enum SecurityModeEnum {
+enum class SecurityModeEnum {
     OPEN, WEP, WPA, WPA2
 }

@@ -1,7 +1,9 @@
 package com.kongqw.wifilibrary.listener;
 
 /**
- * Created by kqw on 2016/8/4.
+ *
+ * @author kqw
+ * @date 2016/8/4
  * WIFI连接的回调接口
  */
 public interface OnWifiConnectListener {

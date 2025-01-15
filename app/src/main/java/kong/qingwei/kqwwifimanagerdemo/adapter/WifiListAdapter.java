@@ -18,7 +18,9 @@ import java.util.List;
 import kong.qingwei.kqwwifimanagerdemo.R;
 
 /**
- * Created by kqw on 2016/8/2.
+ *
+ * @author kqw
+ * @date 2016/8/2
  * Wifi列表的数据适配器
  */
 public class WifiListAdapter extends BaseAdapter {

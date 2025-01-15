@@ -9,8 +9,9 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.NonNull;
 import android.util.Log;
+
+import androidx.annotation.NonNull;
 
 import com.kongqw.wifilibrary.listener.OnWifiConnectListener;
 import com.kongqw.wifilibrary.listener.OnWifiEnabledListener;

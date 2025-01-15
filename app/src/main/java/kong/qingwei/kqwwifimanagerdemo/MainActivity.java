@@ -6,13 +6,6 @@ import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SwitchCompat;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -21,6 +14,14 @@ import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
+import androidx.appcompat.widget.Toolbar;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+import com.google.android.material.snackbar.Snackbar;
 import com.kongqw.permissionslibrary.PermissionsManager;
 import com.kongqw.wifilibrary.WiFiManager;
 import com.kongqw.wifilibrary.listener.OnWifiConnectListener;
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     // 所需的全部权限
     static final String[] PERMISSIONS = new String[]{
             Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.ACCESS_COARSE_LOCATION
+            Manifest.permission.ACCESS_COARSE_LOCATION,
     };
     private final int GET_WIFI_LIST_REQUEST_CODE = 0;
     private WiFiManager mWiFiManager;
@@ -98,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
             }
 
             @Override
-            public void ignore() {
+            public void ignore(int i) {
                 // 6.0 以下系统 获取WIFI列表
                 List<ScanResult> scanResults = mWiFiManager.getScanResults();
                 refreshData(scanResults);
